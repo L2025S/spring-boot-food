@@ -1,7 +1,6 @@
 package se.iths.lw.springbootfood.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
@@ -12,6 +11,7 @@ public class Food {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
 
     @Column(name="has_lactose")
@@ -24,18 +24,17 @@ public class Food {
     private String barcode;
 
     @Column(nullable = false)
-    @Min(0)
     private double price;
 
     @Column(name ="best_before")
     private LocalDate bestBefore;
+
     private int quantity;
 
     public Food() {
     }
 
-    public Food(Long id, String name, boolean hasLactose, boolean hasSeafood, String barcode, double price, LocalDate bestBefore, int quantity) {
-        this.id = id;
+    public Food(String name, boolean hasLactose, boolean hasSeafood, String barcode, double price, LocalDate bestBefore, int quantity) {
         this.name = name;
         this.hasLactose = hasLactose;
         this.hasSeafood = hasSeafood;

@@ -1,6 +1,5 @@
 package se.iths.lw.springbootfood.respository;
 
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import se.iths.lw.springbootfood.model.Food;
@@ -13,6 +12,7 @@ import java.util.Optional;
 public interface FoodRepository extends JpaRepository<Food, Long> {
     Optional<Food> findByName(String name);
     Optional<Food> findByBarcode(String barcode);
+    Optional<Food> findById(Long id);
     List<Food> findByHasSeafoodTrue();
     List<Food> findByHasLactoseTrue();
     List<Food> findByNameContainingIgnoreCase(String keyword);
