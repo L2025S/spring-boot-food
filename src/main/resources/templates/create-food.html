@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{/static/style.css}" href="/static/style.css" />
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
     <title>Create Food</title>
 </head>
 <body>
+<div th:replace="~{fragments/navbar :: body}"></div>
+
 <h1>Create Food</h1>
 <div class="page-container">
 <div th:if="${errorMessage}" style="color:red; font-weight:bold;">

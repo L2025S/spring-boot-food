@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Food Details</title>
-    <link rel="stylesheet" href="/static/style.css" th:href="@{/static/style.css}">
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
 </head>
 <body>
+<div th:replace="~{fragments/navbar :: body}"></div>
+
 <h1>Food Details</h1>
 <div class="page-container">
 
     <div th:if="${food == null}">
         <h2>Food not found</h2>
-        <p th:if="${errorMesage!= null}" th:text="${errorMessage}"></p>
+        <p th:if="${errorMessage!= null}" th:text="${errorMessage}"></p>
         <a href="/foods" class="back-link">Back to list</a>
     </div>
 

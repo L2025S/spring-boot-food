@@ -97,5 +97,66 @@ public class FoodController {
     }
 
 
+    // ================= Check about lactose and seafood ==========================
+    @GetMapping("/lactose")
+    public String getFoodsWithLactose(Model model) {
+        try{
+            log.info("GET /foods/lactose -fetching list of foods containing lactose.");
+        model.addAttribute("foods", foodService.findByHasLactoseTrue());
+        return "lactose-list-food";
+        } catch (RuntimeException ex) {
+            log.error("Error fetching list of foods containing lactose: {}", ex.getMessage());
+            model.addAttribute("errorMessage", ex.getMessage());
+            return "lactose-list-food";
+        }
+
+    }
+
+    @GetMapping("/seafood")
+    public String getFoodsWithSeafood(Model model){
+        try {
+            model.addAttribute("foods", foodService.findByHasSeafoodTrue());
+            return "seafood-list-food";
+        } catch (RuntimeException ex) {
+            log.error("Error fetching list of foods containing seafood: {}", ex.getMessage());
+            model.addAttribute("errorMessage", ex.getMessage());
+            return "seafood-list-food";
+        }
+
+    }
+
+
+   @GetMapping("/check")
+    public String checkAllergy(@RequestParam(required = false) String barcode, Model model){
+
+        if(barcode == null || barcode.isBlank()){
+            return "check-food";
+        }
+        log.info("GET /foods/check Starting allergy check for barcode {}", barcode);
+        try {
+            boolean hasLactose = foodService.findIfHasLactoseByBarcode(barcode);
+            boolean hasSeafood = foodService.findIfHasSeafoodByBarcode(barcode);
+
+            String result;
+            if (hasLactose && hasSeafood) {
+                result = "⚠️This food contains lactose AND seafood.";
+            } else if (hasLactose) {
+                result = "⚠️This food contains lactose.";
+            } else if (hasSeafood) {
+                result = "⚠️This food contains seafood.";
+            } else {
+                result = "This food contains neither lactose nor seafood.";
+            }
+
+            model.addAttribute("result", result);
+            return "check-food";
+        } catch (RuntimeException ex) {
+            log.warn("Error during allergy check for barcode {} : {}", barcode, ex.getMessage());
+            model.addAttribute("errorMessage",ex.getMessage());
+            return "check-food";
+        }
+   }
+
+
 
 }
