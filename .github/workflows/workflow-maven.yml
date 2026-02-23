@@ -37,4 +37,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: l2025s/spring-boot-food-1.0.0
+          tags: l2025s/spring-boot-food-1.0.0:latest
