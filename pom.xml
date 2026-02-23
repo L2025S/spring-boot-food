@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>se.iths.lw</groupId>
-    <artifactId>Spring-Boot-Food</artifactId>
+    <artifactId>spring-boot-food</artifactId>
     <version>1.0.0</version>
     <name>Spring-Boot-Food</name>
     <description>Spring-Boot-Food</description>
