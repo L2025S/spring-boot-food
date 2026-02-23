@@ -30,13 +30,41 @@ This project allows users to manage food items, track stock levels, check allerg
 
 | Layer | Technology |
 |-------|------------|
-| Backend | Spring Boot 3 / Java 17 |
+| Backend | Spring Boot 4.02 / Java 17 |
 | View | Thymeleaf |
 | Database | PostgreSQL |
 | Build Tool | Maven |
 | Containerization | Docker |
 | Deployment | Render Web Service |
 
+
 ---
 
+## 🐳 Docker
 
+### Build the JAR
+```bash
+mvn clean package
+
+### Build Docker image
+docker build -t l2025s/spring-boot-food-1.0.0:latest .
+
+### Run locally
+docker run -p 8080:8080 l2025s/spring-boot-food-1.0.0:latest
+
+
+##Deployment(Render)
+
+###Required configuration
+Render automatically injrects a dynamic port via:
+PORT=xxxxx
+To support this, the application includes:
+server.port=${PORT:8080}
+
+##Envorionment Variables (for Database) on Render:
+DB_URL, DB_USERNAME, DB_PASSWORD
+
+
+
+## Live Demo
+👉 https://spring-boot-food-1-0-0-latest.onrender.com/foods
