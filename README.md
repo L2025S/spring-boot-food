@@ -46,6 +46,27 @@ This project allows users to manage food items, track stock levels, check allerg
 ### _(⚠️ note：Render free server: it takes 50 seconds to wake up the server)_  
 
 ---
+# 📸 Screenshots
+
+<p align="center">
+  <strong>📦 Food List</strong><br>
+  <img src="screenshots/Food List.png" width="800">
+</p>
+
+<p align="center">
+  <strong>➕ Create Food</strong><br>
+  <img src="screenshots/Create foods.png" width="800">
+</p>
+
+<p align="center">
+  <strong>🥛 Foods Containing Lactose</strong><br>
+  <img src="screenshots/Food Containing Lactose.png" width="800">
+</p>
+
+<p align="center">
+  <strong>📉 Low Stock Foods</strong><br>
+  <img src="screenshots/Low Stock Foods.png" width="800">
+</p>
 
 ## 🐳 Docker
 
@@ -64,11 +85,10 @@ PORT=xxxxx
 To support this, the application includes:
 server.port=${PORT:8080}
 
-Environment Variables for database in Render:
+Environment Variables:
 DB_URL, DB_USERNAME, DB_PASSWORD
 
 ---
 
-## Screenshots
 
 
