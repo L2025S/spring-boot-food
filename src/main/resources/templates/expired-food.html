@@ -26,9 +26,8 @@
     <tbody>
     <tr th:each="food : ${foods}">
       <td th:text="${food.name}"></td>
-      <th th:text="${food.barcode}"></th>
-      <th th:text="${food.bestBefore}"></th>
-
+      <td th:text="${food.barcode}"></td>
+      <td th:text="${food.bestBefore}"></td>
     </tr>
     </tbody>
   </table>
