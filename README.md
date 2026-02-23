@@ -66,5 +66,5 @@ DB_URL, DB_USERNAME, DB_PASSWORD
 
 
 
-## Live Demo
+## Live Demo (It takes about 50 seconds to wake up the server.)
 👉 https://spring-boot-food-1-0-0-latest.onrender.com/foods
