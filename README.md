@@ -39,7 +39,7 @@ This project allows users to manage food items, track stock levels, check allerg
 
 ---
 
-# 🌐 **🚀 LIVE DEMO（点击进入）**
+# 🌐 **🚀 LIVE DEMO（Click here ）**
 
 ## 👉 **🔗 https://spring-boot-food-1-0-0-latest.onrender.com/foods**
 
