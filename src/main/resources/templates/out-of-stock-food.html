@@ -23,7 +23,7 @@
 
         <tbody>
         <tr th:each="food : ${foods}">
-            <td th:tex="${food.name}"></td>
+            <td th:text="${food.name}"></td>
             <td th:text="${food.barcode}"></td>
             <td th:text="${food.quantity}"></td>
 
