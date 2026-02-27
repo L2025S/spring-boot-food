@@ -47,25 +47,29 @@ This project allows users to manage food items, track stock levels, check allerg
 
 ---
 # 📸 Screenshots
-
+📦 All Foods
 <p align="center">
-  <strong>📦 Food List</strong><br>
-  <img src="screenshots/Food List.png" width="800">
+<img src="screenshots/All Foods.png" width="800">
 </p>
-
+➕ Create Food
 <p align="center">
-  <strong>➕ Create Food</strong><br>
-  <img src="screenshots/Create foods.png" width="800">
+<img src="screenshots/Create Food.png" width="800">
 </p>
-
+⚠️ Food Allergy Check
 <p align="center">
-  <strong>🥛 Foods Containing Lactose</strong><br>
-  <img src="screenshots/Food Containing Lactose.png" width="800">
+<img src="screenshots/Food Allergy Check.png" width="800">
 </p>
-
+⏳ Food Expiring Soon
 <p align="center">
-  <strong>📉 Low Stock Foods</strong><br>
-  <img src="screenshots/Low Stock Foods.png" width="800">
+<img src="screenshots/Food Expiring Soon.png" width="800">
+</p>
+🥛 Foods Containing Lactose
+<p align="center">
+<img src="screenshots/Foods Containing Lactose.png" width="800">
+</p>
+📉 Low Stock Foods
+<p align="center">
+<img src="screenshots/Low Stock Foods.png" width="800">
 </p>
 
 ## 🐳 Docker
